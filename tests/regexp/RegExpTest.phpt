@@ -48,6 +48,11 @@ require __DIR__ . '/bootstrap.php';
 	 {
 		 Assert::match('#'.Regexp::FACEBOOK.'#', 'https://www.facebook.com/foo-profile');
 	 }
+
+	 function testGoogle()
+	 {
+		 Assert::match('#'.Regexp::GOOGLE.'#', 'https://plus.google.com/u/0/117582428302844646322/posts');
+	 }
  }
 
  $test = new RegExpTest();

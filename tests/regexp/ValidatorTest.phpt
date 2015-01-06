@@ -48,6 +48,11 @@ require __DIR__ . '/bootstrap.php';
 	 {
 		 Assert::match(Validator::$messages['FACEBOOK'], 'Please enter a valid facebook page.');
 	 }
+
+	 function testGoogleMessage()
+	 {
+		 Assert::match(Validator::$messages['GOOGLE'], 'Please enter a valid google page.');
+	 }
  }
 
  $test = new ValidatorTest();
