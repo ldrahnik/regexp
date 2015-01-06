@@ -1,4 +1,5 @@
 .idea/*
+tests/regexp/output/*
 tests/temp/*
 vendor/*
 composer.lock
