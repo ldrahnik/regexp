@@ -1,4 +1,5 @@
 .idea/*
+tests/temp/*
 vendor/*
 composer.lock
 coverage.dat

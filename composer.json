@@ -16,11 +16,13 @@
     },
     "minimum-stability": "dev",
     "require": {
-
     },
     "autoload": {
         "psr-0": {
             "regexp": "src/"
         }
+    },
+    "require-dev": {
+        "nette/tester": "~1.3@dev"
     }
 }
