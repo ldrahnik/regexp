@@ -1,12 +1,26 @@
 {
     "name": "ldrahnik/regexp",
     "description": "Set of regular expressions.",
+    "homepage": "https://github.com/ldrahnik/regexp",
+    "license": ["BSD-3-Clause"],
+    "type": "library",
     "authors": [
         {
             "name": "Lukáš Drahník",
             "email": "l.drahnik@gmail.com"
         }
     ],
+    "support": {
+        "email": "l.drahnik@gmail.com",
+        "issues": "https://github.com/ldrahnik/regexp/issues"
+    },
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+
+    },
+    "autoload": {
+        "psr-0": {
+            "regexp": "src/"
+        }
+    }
 }
