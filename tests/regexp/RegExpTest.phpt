@@ -38,6 +38,11 @@ require __DIR__ . '/bootstrap.php';
 	 {
 		 Assert::match('#'.Regexp::PASSWORD.'#', 'username');
 	 }
+
+	 function testTwitterUsername()
+	 {
+		 Assert::match('#'.Regexp::TWITTER_USERNAME.'#', '@ldrahnik');
+	 }
  }
 
  $test = new RegExpTest();
