@@ -1,0 +1,12 @@
+{
+    "name": "ldrahnik/regexp",
+    "description": "Set of regular expressions.",
+    "authors": [
+        {
+            "name": "ldrahnik",
+            "email": "l.drahnik@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
