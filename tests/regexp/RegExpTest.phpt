@@ -2,32 +2,43 @@
 
 /**
  * Author Lukáš Drahník <L.Drahnik@gmail.com>
+ *
+ * @testCase
  */
 
  namespace regexp\Tests;
 
+
  use Nette,
  	Tester,
- 	Tester\Assert;
+ 	Tester\Assert,
+    regexp\RegExp;
 
- $container = require __DIR__ . '/bootstrap.php';
+require __DIR__ . '/bootstrap.php';
 
-
- class ExampleTest extends Tester\TestCase
+ class RegExpTest extends Tester\TestCase
  {
- 	private $container;
 
- 	function __construct(Nette\DI\Container $container)
+ 	function __construct()
  	{
- 		$this->container = $container;
+
  	}
 
- 	function testSomething()
- 	{
- 		Assert::true( true );
- 	}
+	function testUsername()
+	{
+		Assert::match('#'.Regexp::USERNAME.'#', 'username');
+	}
+
+	 function testUrl()
+	 {
+		Assert::match('#'.Regexp::URL.'#', 'https://www.foo.cz');
+	 }
+
+	 function testPassword()
+	 {
+		 Assert::match('#'.Regexp::PASSWORD.'#', 'username');
+	 }
  }
 
-
- $test = new ExampleTest($container);
+ $test = new RegExpTest();
  $test->run();
