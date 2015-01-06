@@ -1,5 +1,7 @@
 <?php
 
+namespace regexp;
+
 /**
  * Common regular expressions.
  *
@@ -9,8 +11,7 @@ class RegExp {
 
 	/** validator */
 	const
-		USERNAME = '/^[a-z0-9_-]{3,16}$/',
-		EMAIL = '/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/',
-		PASSWORD = '/^[a-z0-9_-]{6,18}$/',
-		URL = '/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/';
+		USERNAME = '^[a-z0-9_-]{3,16}$',
+		PASSWORD = '^[a-z0-9_-]{6,18}$',
+		URL = '^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$';
 }
