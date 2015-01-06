@@ -43,6 +43,11 @@ require __DIR__ . '/bootstrap.php';
 	 {
 		 Assert::match('#'.Regexp::TWITTER_USERNAME.'#', '@ldrahnik');
 	 }
+
+	 function testFacebook()
+	 {
+		 Assert::match('#'.Regexp::FACEBOOK.'#', 'https://www.facebook.com/foo-profile');
+	 }
  }
 
  $test = new RegExpTest();

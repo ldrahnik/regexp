@@ -43,6 +43,11 @@ require __DIR__ . '/bootstrap.php';
 	 {
 		 Assert::match(Validator::$messages['TWITTER_USERNAME'], 'Please enter a valid twitter username.');
 	 }
+
+	 function testFacebookMessage()
+	 {
+		 Assert::match(Validator::$messages['FACEBOOK'], 'Please enter a valid facebook page.');
+	 }
  }
 
  $test = new ValidatorTest();
