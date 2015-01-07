@@ -41,17 +41,17 @@ class ValidatorTest extends Tester\TestCase
 
 	function testTwitterUsernameMessage()
 	{
-		Assert::match(Validator::$messages['TWITTER_USERNAME'], 'Please enter a valid twitter username.');
+		Assert::match(Validator::$messages['TWITTER_USERNAME'], 'Please enter a valid twitter username: @username.');
 	}
 
 	function testFacebookMessage()
 	{
-		Assert::match(Validator::$messages['FACEBOOK'], 'Please enter a valid facebook page.');
+		Assert::match(Validator::$messages['FACEBOOK'], 'Please enter a valid facebook page: https://www.facebook.com/foo-profile.');
 	}
 
 	function testGoogleMessage()
 	{
-		Assert::match(Validator::$messages['GOOGLE'], 'Please enter a valid google page.');
+		Assert::match(Validator::$messages['GOOGLE'], 'Please enter a valid google page: https://plus.google.com/u/0/117582428302844646322/posts.');
 	}
 }
 
