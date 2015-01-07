@@ -29,11 +29,6 @@ class RegExpTest extends Tester\TestCase
 		Assert::match('#'.Regexp::USERNAME.'#', 'username');
 	}
 
-	function testUrl()
-	{
-		Assert::match('#'.Regexp::URL.'#', 'https://www.foo.cz');
-	}
-
 	function testPassword()
 	{
 		Assert::match('#'.Regexp::PASSWORD.'#', 'username');
