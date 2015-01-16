@@ -9,8 +9,7 @@ Set of regular expressions.
 Requirements
 ------------
 
-
-
+ldrahnik/regexp requires PHP 5.3.3 or higher.
 
 Installation
 ------------
