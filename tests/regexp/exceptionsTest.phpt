@@ -16,7 +16,7 @@ $container = require __DIR__ . '/bootstrap.php';
 class exceptionsTest extends Tester\TestCase
 {
 	/** @var \regexp\Regexp */
-	private $regexpServices;
+	public $regexpServices;
 
 	/** @var /Container */
 	private $container;
