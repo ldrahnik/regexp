@@ -43,7 +43,7 @@ class Regexp
 	 */
 	public function getRegularExpression($name)
 	{
-		if(array_key_exists($name, $this->regulars)) {
+		if(!array_key_exists($name, $this->regulars)) {
 			throw new RegularExpressionNotFound("Regular expression '{$name}' not found.");
 		} else {
 			return $this->regulars[$name];
