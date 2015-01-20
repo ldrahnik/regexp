@@ -1,54 +1,56 @@
 <?php
 
+namespace regexp\Tests;
+
+use Nette;
+use	Tester;
+use	Tester\Assert;
+
+$container = require __DIR__ . '/bootstrap.php';
+
 /**
  * Author Lukáš Drahník <L.Drahnik@gmail.com>
  *
  * @testCase
  */
-
-namespace regexp\Tests;
-
-
-use Nette,
-	Tester,
-	Tester\Assert,
-	regexp\RegExp;
-
-require __DIR__ . '/bootstrap.php';
-
 class RegExpTest extends Tester\TestCase
 {
+	/** @var \regexp\Regexp */
+	private $regexpServices;
 
-	function __construct()
+	/** @var /Container */
+	private $container;
+
+	public function __construct($container)
 	{
-
+		$this->container = $container;
 	}
 
-	function testUsername()
+	protected function setUp()
 	{
-		Assert::match('#'.Regexp::USERNAME.'#', 'username');
+		$this->regexpServices = $this->container->getService('regexp.regexp');
 	}
 
-	function testPassword()
+	function testServiceConfiguration()
 	{
-		Assert::match('#'.Regexp::PASSWORD.'#', 'username');
+		Assert::type('regexp\Regexp', $this->regexpServices);
 	}
 
-	function testTwitterUsername()
+	function testMyRegular()
 	{
-		Assert::match('#'.Regexp::TWITTER_USERNAME.'#', '@ldrahnik');
+		Assert::match($this->regexpServices->regulars['username'], '^[a-z0-9_-]{3,16}$');
 	}
 
-	function testFacebook()
+	function testEmbeddedRegular()
 	{
-		Assert::match('#'.Regexp::FACEBOOK.'#', 'https://www.facebook.com/foo-profile');
+		Assert::match($this->regexpServices->regulars['twitterUsername'], 'foo');
 	}
 
-	function testGoogle()
+	function testOverrideRegular()
 	{
-		Assert::match('#'.Regexp::GOOGLE.'#', 'https://plus.google.com/u/0/117582428302844646322/posts');
+		Assert::match($this->regexpServices->regulars['hello'], 'foo');
 	}
 }
 
-$test = new RegExpTest();
+$test = new RegExpTest($container);
 $test->run();
