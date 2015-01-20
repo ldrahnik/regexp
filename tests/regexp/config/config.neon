@@ -1,0 +1,6 @@
+extensions:
+	regexp: regexp\DI\RegexpHelperExtension
+
+regexp:
+	hello: foo
+	twitterUsername: foo
