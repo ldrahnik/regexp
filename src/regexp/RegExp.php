@@ -15,9 +15,9 @@ class Regexp
 	public $regulars = array();
 
 	/**
-	 * @param Array $regulars
+	 * @param $regulars
 	 */
-	public function __construct(array $regulars)
+	public function __construct($regulars)
 	{
 		$this->regulars = $regulars;
 	}
