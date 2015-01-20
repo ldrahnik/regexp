@@ -50,6 +50,17 @@ class RegexpTest extends Tester\TestCase
 	{
 		Assert::match($this->regexpServices->regulars['hello'], 'foo');
 	}
+
+	function testGetRegularExpression()
+	{
+		Assert::match($this->regexpServices->getRegularExpression('hello'), 'foo');
+	}
+
+	function testSetRegularExpression()
+	{
+		$this->regexpServices->setRegularExpression('hello2', 'bar');
+		Assert::match($this->regexpServices->getRegularExpression('hello2'), 'bar');
+	}
 }
 
 $test = new RegexpTest($container);
