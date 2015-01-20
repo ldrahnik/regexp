@@ -8,7 +8,7 @@ namespace regexp;
  * Author Lukáš Drahník <L.Drahnik@gmail.com>
  * @package regexp
  */
-class RegExp
+class Regexp
 {
 
 	/** @var array */

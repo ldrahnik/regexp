@@ -13,7 +13,7 @@ $container = require __DIR__ . '/bootstrap.php';
  *
  * @testCase
  */
-class RegExpTest extends Tester\TestCase
+class RegexpTest extends Tester\TestCase
 {
 	/** @var \regexp\Regexp */
 	private $regexpServices;
@@ -52,5 +52,5 @@ class RegExpTest extends Tester\TestCase
 	}
 }
 
-$test = new RegExpTest($container);
+$test = new RegexpTest($container);
 $test->run();
