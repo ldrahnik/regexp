@@ -30,7 +30,7 @@ class RegexpHelperExtension extends CompilerExtension
 		$config = $this->getConfig($this->defaults);
 		$builder = $this->getContainerBuilder();
 
-		$builder->addDefinition($this->prefix('regexpHelper'))
+		$builder->addDefinition($this->prefix('regexp'))
 			->setClass('regexp\Regexp',
 				array($config)
 			);
