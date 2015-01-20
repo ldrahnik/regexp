@@ -35,15 +35,17 @@ class exceptionsTest extends Tester\TestCase
 	{
 		$this->regexpServices->setRegularExpression('hello3', 'bar');
 
-		Assert::exception(function() {
-			$this->regexpServices->setRegularExpression('hello3', 'bar');
+		$that = $this;
+		Assert::exception(function() use($that) {
+			$that->regexpServices->setRegularExpression('hello3', 'bar');
 		}, 'regexp\RegularExpressionAlreadyDefined');
 	}
 
 	function testRegularExpressionNotFound()
 	{
-		Assert::exception(function() {
-			$this->regexpServices->getRegularExpression('hello4');
+		$that = $this;
+		Assert::exception(function() use($that) {
+			$that->regexpServices->getRegularExpression('hello4');
 		}, 'regexp\RegularExpressionNotFound');
 	}
 }
