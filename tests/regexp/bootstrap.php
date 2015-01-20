@@ -15,6 +15,8 @@ Tester\Environment::setup();
 $temp = __DIR__ . '/temp/';
 if (!file_exists($temp)) {
 	mkdir($temp);
+} else {
+	Tester\Helpers::purge($temp);
 }
 
 $configurator = new \Nette\Configurator;
