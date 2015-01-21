@@ -61,7 +61,8 @@ Now you can use all regulars through services
         $form->addText('twitter', 'Twitter username')
             ->setDefaultValue('@')
             ->addCondition(Form::FILLED)
-        	    ->addRule(Form::PATTERN, 'Please enter twitter username, for example: @username', $this->regexp->getRegularExpression('twitterUsername'));
+        	    ->addRule(Form::PATTERN, 'Please enter twitter username, for example: @username',
+        	    $this->regexp->getRegularExpression('twitterUsername'));
         ...
     }
 ```
