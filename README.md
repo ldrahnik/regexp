@@ -9,7 +9,7 @@ Set of regular expressions.
 Requirements
 ------------
 
-ldrahnik/regexp requires PHP 5.3.3 or higher.
+ldrahnik/regexp requires PHP 5.4 or higher.
 
 Installation
 ------------
@@ -17,7 +17,7 @@ Installation
 Install regexp to your project using  [Composer](http://getcomposer.org/):
 
 ```sh
-$ composer require ldrahnik/regexp:~0.9
+$ composer require ldrahnik/regexp
 ```
 
 Usage
@@ -47,16 +47,21 @@ You are able to override already existing embedded regular expressions
 Now you can use all regulars through services
 
 ```php
-	/** @var \regexp\Regexp */
-	private $regexpServices;
+	/** @var \regexp\Regexp @inject */
+	private $regexp;
 
-    public function __construct(regexp\Regexp $regexpServices)
+    public function __construct(regexp\Regexp $regexp)
     {
-		    $this->regexpServicesc = $regexpServices;
+		    $this->regex = $regexp;
     }
     
-    public function test()
+    public function createComponentForm()
     {
-        $regular = $this->regexpServices->getRegularExpression('twitterUsername');
+        $form = new Nette\Application\UI\Form();
+        $form->addText('twitter', 'Twitter username')
+            ->setDefaultValue('@')
+            ->addCondition(Form::FILLED)
+        	    ->addRule(Form::PATTERN, 'Please enter twitter username, for example: @username', $this->regexp->getRegularExpression('twitterUsername'));
+        ...
     }
 ```
