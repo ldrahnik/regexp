@@ -11,6 +11,8 @@ Requirements
 
 ldrahnik/regexp requires PHP 5.4 or higher.
 
+- [Nette Framework](https://github.com/nette/nette)
+
 Installation
 ------------
 
