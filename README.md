@@ -36,7 +36,7 @@ regexp:
 	twitterUsername: foo
 ```
 
-Now you can use all regulars through services, is possible to set new regular expressions from code via magic setter
+Now you can use all regulars through services
 
 ```php
 	/** @var \regexp\Regexp @inject */
@@ -63,7 +63,7 @@ Now you can use all regulars through services, is possible to set new regular ex
     }
 ```
 
-You are able to use and override already existing embedded regular expressions
+You are able to use or override already existing embedded regular expressions
 
 ```sh
 'username' => '^[a-z0-9_-]{3,16}$',
