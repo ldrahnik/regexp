@@ -113,9 +113,6 @@ class Regexp
 	 */
 	public function __set($name, $value)
 	{
-		dump('fsdfsd');
-		die();
-
 		if ($name === '') {
 			throw MemberAccessException::propertyWriteWithoutName($this);
 		}
