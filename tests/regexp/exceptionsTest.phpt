@@ -31,15 +31,6 @@ class exceptionsTest extends Tester\TestCase
 		$this->regexpServices = $this->container->getService('regexp.regexp');
 	}
 
-	function testAlreadyDefinedException()
-	{
-		$this->regexpServices->setRegularExpression('hello3', 'bar');
-
-		Assert::exception(function() {
-			$this->regexpServices->setRegularExpression('hello3', 'bar');
-		}, 'regexp\RegularExpressionAlreadyDefined');
-	}
-
 	function testRegularExpressionNotFound()
 	{
 		Assert::exception(function() {
