@@ -25,17 +25,6 @@ class Regexp
 	}
 
 	/**
-	 * Insert regular expression if not exist or throw exception.
-	 *
-	 * @param $name
-	 * @param $reg
-	 */
-	public function setRegularExpression($name, $reg)
-	{
-		$this->regulars[$name] = $reg;
-	}
-
-	/**
 	 * Return regular expression of $name.
 	 *
 	 * @param $name
@@ -69,10 +58,7 @@ class Regexp
 			$op = substr($name, 0, 3);
 			$prop = strtolower($name[3]) . substr($name, 4);
 
-			if ($op === 'set') {
-				$this->regulars[$prop] = $args[0];
-				return $this;
-			} elseif ($op === 'get' && isset($this->regulars[$prop])) {
+			if ($op === 'get' && isset($this->regulars[$prop])) {
 				return $this->$prop;
 			}
 		} else if ($name === '') {
@@ -101,25 +87,5 @@ class Regexp
 		}
 
 		throw new RegularExpressionNotFound("Regular expression '{$name}' not found.");
-	}
-
-	/**
-	 * Sets value of a regular expression of $name. Do not call directly.
-	 *
-	 * @param string $name regular name
-	 * @param string $value regular value
-	 *
-	 * @throws MemberAccessException if the name is empty
-	 */
-	public function __set($name, $value)
-	{
-		if ($name === '') {
-			throw MemberAccessException::propertyWriteWithoutName($this);
-		}
-
-		// case-sensitive checking, capitalize first character
-		$name[0] = $name[0] & "\xDF";
-
-		$this->regulars[$name] = $value;
 	}
 }
