@@ -36,17 +36,7 @@ regexp:
 	twitterUsername: foo
 ```
 
-You are able to override already existing embedded regular expressions
-
-```sh
-'username' => '^[a-z0-9_-]{3,16}$',
-'twitterUsername' =>  '^(\@)?[A-Za-z0-9_]+$',
-'password' => '^[a-z0-9_-]{6,18}$',
-'facebook' => '^(https?:\/\/)?(www\.)?facebook.com\/[a-zA-Z0-9(\.\?)?]',
-'google' => '((http|https):\/\/)?(www[.])?plus\.google\.com\/.?\/?.?\/?([0-9]*)'
-```
-
-Now you can use all regulars through services
+Now you can use all regulars through services, is possible to set new regular expressions from code via magic setter
 
 ```php
 	/** @var \regexp\Regexp @inject */
@@ -54,7 +44,7 @@ Now you can use all regulars through services
 
     public function __construct(regexp\Regexp $regexp)
     {
-		    $this->regex = $regexp;
+    	$this->regex = $regexp;
     }
     
     public function createComponentForm()
@@ -71,4 +61,14 @@ Now you can use all regulars through services
         //  equivalent of that expression is
         //  $this->regexp->getTwitterUsername();
     }
+```
+
+You are able to use and override already existing embedded regular expressions
+
+```sh
+'username' => '^[a-z0-9_-]{3,16}$',
+'twitterUsername' =>  '^(\@)?[A-Za-z0-9_]+$',
+'password' => '^[a-z0-9_-]{6,18}$',
+'facebook' => '^(https?:\/\/)?(www\.)?facebook.com\/[a-zA-Z0-9(\.\?)?]',
+'google' => '((http|https):\/\/)?(www[.])?plus\.google\.com\/.?\/?.?\/?([0-9]*)'
 ```
