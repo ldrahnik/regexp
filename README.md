@@ -66,5 +66,9 @@ Now you can use all regulars through services
         	    ->addRule(Form::PATTERN, 'Please enter twitter username, for example: @username',
         	    $this->regexp->getRegularExpression('twitterUsername'));
         ...
+
+        //  $this->regexp->getRegularExpression('twitterUsername'));
+        //  equivalent of that expression is
+        //  $this->regexp->getTwitterUsername();
     }
 ```
