@@ -29,16 +29,10 @@ class Regexp
 	 *
 	 * @param $name
 	 * @param $reg
-	 *
-	 * @throws RegularExpressionAlreadyDefined if the regular is already defined.
 	 */
 	public function setRegularExpression($name, $reg)
 	{
-		if(array_key_exists($name, $this->regulars)) {
-			throw new RegularExpressionAlreadyDefined("Regular expression '{$name}' has been already defined.");
-		} else {
-			$this->regulars[$name] = $reg;
-		}
+		$this->regulars[$name] = $reg;
 	}
 
 	/**
@@ -75,7 +69,10 @@ class Regexp
 			$op = substr($name, 0, 3);
 			$prop = strtolower($name[3]) . substr($name, 4);
 
-			if ($op === 'get' && isset($this->regulars[$prop])) {
+			if ($op === 'set') {
+				$this->regulars[$prop] = $args[0];
+				return $this;
+			} elseif ($op === 'get' && isset($this->regulars[$prop])) {
 				return $this->$prop;
 			}
 		} else if ($name === '') {
@@ -104,5 +101,28 @@ class Regexp
 		}
 
 		throw new RegularExpressionNotFound("Regular expression '{$name}' not found.");
+	}
+
+	/**
+	 * Sets value of a regular expression of $name. Do not call directly.
+	 *
+	 * @param string $name regular name
+	 * @param string $value regular value
+	 *
+	 * @throws MemberAccessException if the name is empty
+	 */
+	public function __set($name, $value)
+	{
+		dump('fsdfsd');
+		die();
+
+		if ($name === '') {
+			throw MemberAccessException::propertyWriteWithoutName($this);
+		}
+
+		// case-sensitive checking, capitalize first character
+		$name[0] = $name[0] & "\xDF";
+
+		$this->regulars[$name] = $value;
 	}
 }

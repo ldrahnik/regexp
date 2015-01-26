@@ -66,6 +66,12 @@ class RegexpTest extends Tester\TestCase
 		$this->regexpServices->setRegularExpression('hello2', 'bar');
 		Assert::match($this->regexpServices->getRegularExpression('hello2'), 'bar');
 	}
+
+	function testSetAndGetRegularExpressionMagic()
+	{
+		$this->regexpServices->setHello3('bar');
+		Assert::match($this->regexpServices->getHello3(), 'bar');
+	}
 }
 
 $test = new RegexpTest($container);
