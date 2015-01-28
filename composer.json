@@ -22,7 +22,10 @@
     "autoload": {
         "psr-4": {
             "regexp": "src/"
-        }
+        },
+        "classmap": [
+            "src/exceptions.php"
+        ]
     },
     "require-dev": {
         "nette/tester": "~1.3@dev"
