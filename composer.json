@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "regexp\\": "src/"
+            "Regexp\\": "src/"
         },
         "classmap": [
             "src/exceptions.php"

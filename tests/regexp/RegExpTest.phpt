@@ -1,6 +1,6 @@
 <?php
 
-namespace regexp\Tests;
+namespace Regexp\Tests;
 
 use Nette;
 use	Tester;
@@ -15,7 +15,7 @@ $container = require __DIR__ . '/bootstrap.php';
  */
 class RegexpTest extends Tester\TestCase
 {
-	/** @var \regexp\Regexp */
+	/** @var \Regexp\Regexp */
 	private $regexpServices;
 
 	/** @var /Container */

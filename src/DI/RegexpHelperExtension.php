@@ -1,6 +1,6 @@
 <?php
 
-namespace regexp\DI;
+namespace Regexp\DI;
 
 use Nette\DI\CompilerExtension;
 
@@ -31,7 +31,7 @@ class RegexpHelperExtension extends CompilerExtension
 		$builder = $this->getContainerBuilder();
 
 		$builder->addDefinition($this->prefix('regexp'))
-			->setClass('regexp\Regexp',
+			->setClass('Regexp\Regexp',
 				array($config)
 			);
 	}

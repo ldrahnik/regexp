@@ -1,6 +1,6 @@
 <?php
 
-namespace regexp\Tests;
+namespace Regexp\Tests;
 
 use Nette;
 use	Tester;
