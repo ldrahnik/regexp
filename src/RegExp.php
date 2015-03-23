@@ -3,10 +3,10 @@
 namespace Regexp;
 
 /**
- * Regular expression.
+ * Class Regexp
  *
- * Author Lukáš Drahník <L.Drahnik@gmail.com>
- * @package regexp
+ * @author Lukáš Drahník (http://drahnik-lukas.com/)
+ * @package ldrahnik\Regexp
  */
 class Regexp
 {

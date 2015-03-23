@@ -2,10 +2,11 @@
 
 namespace Regexp;
 
-
 /**
- * Class Exceptions
- * @package regexp
+ * Interface Exception
+ *
+ * @author Lukáš Drahník (http://drahnik-lukas.com/)
+ * @package ldrahnik\Regexp
  */
 interface Exception
 {
@@ -13,7 +14,8 @@ interface Exception
 }
 
 /**
- * Author Lukáš Drahník <L.Drahnik@gmail.com>
+ * Class RegularExpressionNotFound
+ * @package ldrahnik\Regexp
  */
 class RegularExpressionNotFound extends \LogicException
 {
@@ -21,7 +23,8 @@ class RegularExpressionNotFound extends \LogicException
 }
 
 /**
- * Author Lukáš Drahník <L.Drahnik@gmail.com>
+ * Class MemberAccessException
+ * @package ldrahnik\Regexp
  */
 class MemberAccessException extends \LogicException implements Exception
 {

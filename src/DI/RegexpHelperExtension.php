@@ -4,12 +4,11 @@ namespace Regexp\DI;
 
 use Nette\DI\CompilerExtension;
 
-
 /**
- * Regular expressions helper extension.
+ * Class RegexpHelperExtension
  *
- * Author Lukáš Drahník <L.Drahnik@gmail.com>
- * @package regexp\DI
+ * @author Lukáš Drahník (http://drahnik-lukas.com/)
+ * @package ldrahnik\Regexp
  */
 class RegexpHelperExtension extends CompilerExtension
 {
