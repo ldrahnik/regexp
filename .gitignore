@@ -1,6 +1,2 @@
-tests/regexp/output/*
-tests/regexp/temp/*
-tests/temp/*
 vendor/*
 composer.lock
-coverage.dat
