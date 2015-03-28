@@ -5,12 +5,12 @@ namespace Regexp\DI;
 use Nette\DI\CompilerExtension;
 
 /**
- * Class RegexpHelperExtension
+ * Class RegexpExtension
  *
  * @author Lukáš Drahník (http://drahnik-lukas.com/)
  * @package ldrahnik\Regexp
  */
-class RegexpHelperExtension extends CompilerExtension
+class RegexpExtension extends CompilerExtension
 {
 
 	/**

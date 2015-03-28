@@ -1,5 +1,5 @@
 extensions:
-	regexp: Regexp\DI\RegexpHelperExtension
+	regexp: Regexp\DI\RegexpExtension
 
 regexp:
 	hello: foo
