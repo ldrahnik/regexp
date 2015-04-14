@@ -31,7 +31,7 @@ class exceptionsTest extends Tester\TestCase
 
 	protected function setUp()
 	{
-		$this->regexpServices = $this->container->getService('regexp.regexp');
+		$this->regexpServices = $this->container->getService('regexp.Regexp');
 	}
 
 	function testRegularExpressionNotFound()

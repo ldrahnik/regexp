@@ -31,12 +31,12 @@ class RegexpTest extends Tester\TestCase
 
 	protected function setUp()
 	{
-		$this->regexpServices = $this->container->getService('regexp.regexp');
+		$this->regexpServices = $this->container->getService('regexp.Regexp');
 	}
 
 	function testServiceConfiguration()
 	{
-		Assert::type('regexp\Regexp', $this->regexpServices);
+		Assert::type('Regexp\Regexp', $this->regexpServices);
 	}
 
 	function testMyRegular()

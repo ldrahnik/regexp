@@ -29,7 +29,7 @@ class RegexpExtension extends CompilerExtension
 		$config = $this->getConfig($this->defaults);
 		$builder = $this->getContainerBuilder();
 
-		$builder->addDefinition($this->prefix('regexp'))
+		$builder->addDefinition($this->prefix('Regexp'))
 			->setClass('Regexp\Regexp',
 				array($config)
 			);
