@@ -3,6 +3,7 @@ ldrahnik/regexp
 
 [![Build Status](https://travis-ci.org/ldrahnik/regexp.svg)](https://travis-ci.org/ldrahnik/regexp)
 [![Latest stable](https://img.shields.io/packagist/v/ldrahnik/regexp.svg)](https://packagist.org/packages/ldrahnik/regext)
+[![Downloads total](https://img.shields.io/packagist/dt/ldrahnik/regexp.svg?style=flat-square)](https://packagist.org/packages/ldrahnik/regexp)
 
 Set of regular expressions.
 
